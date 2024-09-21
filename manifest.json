@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "delog",
+    "version": "1.0.0",
+    "description": "An automatic RealmEye delogger",
+    "icons": {
+        "16": "images/icons/icon16.png",
+        "32": "images/icons/icon32.png",
+        "48": "images/icons/icon48.png",
+        "128": "images/icons/icon128.png"
+    },
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "permissions": [
+        "cookies",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://*/"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

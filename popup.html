@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            min-width: 500px;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 4 columns */
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .class-item {
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .class-item img {
+            width: 50px;
+            height: 50px;
+            filter: grayscale(100%);
+            /* Grayscale by default */
+            transition: filter 0.3s;
+        }
+
+        .class-item.selected img {
+            filter: none;
+            /* Remove grayscale when selected */
+        }
+    </style>
+</head>
+
+<body>
+    <button id="fetchIgn">Fetch Current IGN</button>
+    <p id="currentIgn" align="center">Current IGN: <span id="ignValue">N/A</span></p>
+
+    <h2>Select a Class</h2>
+    <div class="class-grid" id="classGrid">
+        <div class="class-item" data-class-id="775">
+            <img src="images/classes/archer.png" alt="Archer">
+        </div>
+        <div class="class-item" data-class-id="800">
+            <img src="images/classes/assassin.png" alt="Assassin">
+        </div>
+        <div class="class-item" data-class-id="796">
+            <img src="images/classes/bard.png" alt="Bard">
+        </div>
+        <div class="class-item" data-class-id="802">
+            <img src="images/classes/huntress.png" alt="Huntress">
+        </div>
+        <div class="class-item" data-class-id="818">
+            <img src="images/classes/kensei.png" alt="Kensei">
+        </div>
+        <div class="class-item" data-class-id="798">
+            <img src="images/classes/knight.png" alt="Knight">
+        </div>
+        <div class="class-item" data-class-id="803">
+            <img src="images/classes/mystic.png" alt="Mystic">
+        </div>
+        <div class="class-item" data-class-id="801">
+            <img src="images/classes/necromancer.png" alt="Necromancer">
+        </div>
+        <div class="class-item" data-class-id="806">
+            <img src="images/classes/ninja.png" alt="Ninja">
+        </div>
+        <div class="class-item" data-class-id="799">
+            <img src="images/classes/paladin.png" alt="Paladin">
+        </div>
+        <div class="class-item" data-class-id="784">
+            <img src="images/classes/priest.png" alt="Priest">
+        </div>
+        <div class="class-item" data-class-id="768">
+            <img src="images/classes/rogue.png" alt="Rogue">
+        </div>
+        <div class="class-item" data-class-id="785">
+            <img src="images/classes/samurai.png" alt="Samurai">
+        </div>
+        <div class="class-item" data-class-id="805">
+            <img src="images/classes/sorcerer.png" alt="Sorcerer">
+        </div>
+        <div class="class-item" data-class-id="817">
+            <img src="images/classes/summoner.png" alt="Summoner">
+        </div>
+        <div class="class-item" data-class-id="804">
+            <img src="images/classes/trickster.png" alt="Trickster">
+        </div>
+        <div class="class-item" data-class-id="797">
+            <img src="images/classes/warrior.png" alt="Warrior">
+        </div>
+        <div class="class-item" data-class-id="782">
+            <img src="images/classes/wizard.png" alt="Wizard">
+        </div>
+        <!-- Add more classes here with the same structure -->
+    </div>
+    <button id="start">Start Polling</button>
+    <button id="stop">Stop Polling</button>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
