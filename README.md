@@ -13,20 +13,18 @@
 > Note: The extension has only been tested in Google Chrome. Compatibility with other browsers may come in the future.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/ba90a559-965a-4d2d-b28e-257eae6cbebc">
+  <img src="https://github.com/user-attachments/assets/a23909c5-7f24-470f-8ce5-c5f64cedb6ca">
 </div>
 
-Before polling, click the **Fetch Current IGN** button.
+Before polling, click the **Log In** text. When doing so, make sure you are currently logged in to RealmEye.
 
 Then, select classes that you want to keep on your RealmEye page.
 
-Click **Start Polling** and let the program run. Badge text on the extension's icon will notify if the program is currently polling.
+Click the start icon and let the program run. Badge text on the extension's icon will notify if the program is currently polling.
 
 ## Contributing
 
 If you have any suggestions, bug reports, or feature requests, please feel free to open an issue or submit a pull request.
-
-Particularly, the user interface and source code is currently very scuffed so improvements will happen eventually. 
 
 ## License
 
