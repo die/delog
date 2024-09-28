@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         startPolling();
     } else if (message.action === 'stopPolling') {
         stopPolling();
-    } else if (message.action === 'fetchIgn') {
+    } else if (message.action === 'getUsername') {
         try {
             getUsername().then(username => sendResponse({ ign: username }));
         } catch (error) {
@@ -69,8 +69,9 @@ async function pollWebsite() {
         console.error(error)
         return stopPolling()
     });
-
+    
     const html = await data.text();
+    if (!html) return;
 
     const cookie = await getCookie(url, 'session');
     if (!cookie) return stopPolling();
@@ -97,7 +98,6 @@ async function pollWebsite() {
         };
 
         fetch("https://www.realmeye.com/dead-character", requestOptions)
-        .then((response) => response.text())
         .catch((error) => {
             console.error(error)
             return stopPolling()
